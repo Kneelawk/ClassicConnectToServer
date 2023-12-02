@@ -1,0 +1,12 @@
+@nilmod {
+    /* There is no id field. The filename defines the id of the mod. */
+    name: "NilClassic";
+    description: "An example classic mod for NilLoader.";
+    authors: "kneelawk";
+    version: "${version}";
+}
+
+entrypoints {
+    /* premain is the only entrypoint defined by NilLoader itself. */
+    premain: "com.kneelawk.nilclassic.premain.NilClassicPremain";
+}
