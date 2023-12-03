@@ -1,0 +1,13 @@
+@nilmod {
+    /* There is no id field. The filename defines the id of the mod. */
+    name: "Connect To Server";
+    description: "Connect the client to servers.";
+    authors: "kneelawk";
+    version: "${version}";
+}
+
+entrypoints {
+    premain: "com.kneelawk.connecttoserver.premain.ConnectToServerPremain";
+
+    client-init: "com.kneelawk.connecttoserver.ConnectToServerMain";
+}

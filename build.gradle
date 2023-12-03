@@ -8,7 +8,7 @@ sourceCompatibility = 8
 targetCompatibility = 8
 
 group = 'com.kneelawk'
-archivesBaseName = 'NilClassic'
+archivesBaseName = 'ConnectToServer'
 version = '1.0'
 
 repositories {
@@ -34,6 +34,10 @@ repositories {
             includeGroup 'de.oceanlabs.mcp'
         }
     }
+    maven {
+        name = 'Kneelawk'
+        url = 'https://kneelawk.com/maven/'
+    }
     exclusiveContent {
         forRepository {
             flatDir {
@@ -47,7 +51,7 @@ repositories {
 }
 
 nil {
-    id "nilclassic"
+    id "connecttoserver"
     // Set this to false for a smaller JAR that can't be run as a standalone Java agent
     standalone false
 }
@@ -70,6 +74,8 @@ dependencies {
     // modVia 'dev.emi:emi:0.3.3+1.4'
 
     // Normal libraries can be added with the usual "implementation" configuration.
+
+    implementation 'com.kneelawk.nilclassic-api:client:0.1.2'
 }
 
 mappings {
